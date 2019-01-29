@@ -1,0 +1,61 @@
+.Auth{
+
+}
+
+
+/* // gradient animation */
+@keyframes gradient { 
+  0%{background-position:0 0}
+  100%{background-position:100% 0}
+}
+
+.webflowStyleInput {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding: 1.4rem 2rem 1.6rem;
+  background: rgba(5, 2, 107, .8);
+}
+.webflowStyleInput:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+}
+
+.webflowStyleInput input {
+  flex-grow: 1;
+  color: #BFD2FF;
+  font-size: 16px;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  width: 100%;
+  background-color: rgba(5, 2, 107, .8);
+}
+.webflowStyleInput input::-webkit-input-placeholder {
+    color: #7881A1;
+}
+
+.webflowStyleInput button {
+  color:  #7881A1;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  transition: color .25s;
+}
+.webflowStyleInput button:hover {
+    color: #BFD2FF;
+}
