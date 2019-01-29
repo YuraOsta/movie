@@ -1,4 +1,4 @@
-import { SET_FORM_VALID, SET_EMAIL_VALID, SET_PASSWORD_VALID } from "../actions/actionTypes";
+import { SET_EMAIL_VALID, SET_PASSWORD_VALID } from "../actions/actionTypes";
 
 const InitialState = {
     token: null,

@@ -1,0 +1,61 @@
+.Burger{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    cursor: pointer;
+}
+.BurgerItem{
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #000;
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transition-duration: .22s;
+}
+.isActive{
+    left: 90%;
+}
+.BurgerItem::after,
+.BurgerItem::before{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    transition-timing-function: ease;
+    transition-duration: .15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: #000;
+}
+.BurgerItem::before{
+    transition: top .1s ease-in .25s,opacity .1s ease-in;
+    top: -10px;
+}
+.BurgerItem::after{
+    transition: top .1s ease-in .25s,opacity .1s ease-in;
+    bottom: -10px;
+}
+.isActive .BurgerItem{
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transform: rotate(225deg);
+    left: 90%;
+}
+.isActive .BurgerItem::before{
+    top: 0;
+    transition: top .1s ease-out,opacity .1s ease-out .12s;
+    opacity: 0;
+}
+.isActive .BurgerItem::after{
+    bottom: 0;
+    transition: bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+    transform: rotate(-90deg);
+}

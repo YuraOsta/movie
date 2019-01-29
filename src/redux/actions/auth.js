@@ -1,5 +1,8 @@
 import axios from 'axios';
-import { SET_EMAIL_VALID, SET_PASSWORD_VALID } from './actionTypes';
+import { 
+    SET_EMAIL_VALID, 
+    SET_PASSWORD_VALID 
+} from './actionTypes';
 
 const apiKey = 'AIzaSyCb6De2PlP6M-hTleCaAx0APaN7D8enGq8';
 export  function signUpUser(userData){

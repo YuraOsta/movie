@@ -8,7 +8,7 @@ class FilmList extends Component{
     }
     render(){
         return(
-            <div></div>
+            <div>FilmList</div>
         )
     }
 }
